@@ -1,0 +1,7 @@
+<h3 class='i18n-demo__title'></h3>
+<select onchange={{action 'switchLocale'}}>
+  {{#each supportedLocales as |loc|}}
+    <option value={{loc.code}} selected={{if loc.isCurrent 'selected'}}>{{loc.text}}</option>
+  {{/each}}
+</select>
+{{yield}}
